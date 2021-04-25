@@ -35,6 +35,10 @@
 
               <td><%= link_to book.title, book_path(book.id)%></td>
               <td><%= book.body %></td>
+              <%= render "books/favorite", book: book %>
+
+              <!--コメント数-->
+              <td><%= "コメント数: #{book.book_comments.count}" %></td>
             </tr>
             <% end %>
           </tbody>
